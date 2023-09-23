@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'CozetteVector';
+    src: url("/CozetteVector.woff2");
+}
+html{
+    font-family: CozetteVector;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400 !important;
+
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    color: #f0f0f0;
+}
+h1 {
+    font-size:300%;
+    font-weight: 400;
+}
+h3 {
+    font-size:200%;
+    font-weight: 400;
+}
+h6 {
+    font-size:100%;
+    font-weight: 400;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color:#18191c;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content";
+    grid-template-rows: 32px minmax(0, 1fr) 32px;
+    height:100%;
+    width:100%;
+}
+header {
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.4);
+    padding:3px;
+    grid-area:header;
+}
+content {
+    height:100%;
+    width:100%;
+    grid-area:content;
+    overflow:scroll;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+	text-decoration:none;
+	color: inherit;
+}
+
+
+@media only screen and (orientation: portrait) {
+    html {
+        font-size: 39px;
+    }
+    .layout {
+        grid-template-rows: 90px minmax(0, 1fr);
+    }
+    header {
+        padding:6px;
+    }
+}
+
+@media only screen and (min-resolution: 150dpi) {
+    html {
+        font-size: 39px;
+    }
+    .layout {
+        grid-template-rows: 90px minmax(0, 1fr);
+    }
+    header {
+        padding:6px;
+    }
+}

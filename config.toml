@@ -1,0 +1,4 @@
+baseURL = "https://kidofcubes.fenesisu.moe"
+languageCode = "en-us"
+enableRobotsTXT = true
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "sitemap", "RSS", "404"]
