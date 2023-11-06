@@ -115,25 +115,36 @@ function normalRandom() {
 
 
 
-let background_img = new Image();
 
-background_img.src = 'https://kidofcubes.fenesisu.moe/background/';
 let bgm;
 let bgm_button;
 let bgm_source;
 let audio_visualizer_initalized = false;
 let audio_analyser;
-document.addEventListener('DOMContentLoaded', function () {
+
+if(document.readyState!=='loading'){
+    onPageLoad();
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        onPageLoad();
+    }, false);
+}
+
+
+function onPageLoad(){
     bgm = document.getElementById("bgm");
     bgm_button = document.getElementById("bgm_button");
     bgm_source = document.getElementById("bgm_source");
+    let background_img = new Image();
+    background_img.src = 'https://kidofcubes.fenesisu.moe/background/';
 
 
     background_img.onload = function(){
         document.body.style.backgroundImage = "url('" + background_img.src + "')";
         setupParticles();
     };
-}, false);
+
+}
 
 
 function togglebgm(){
