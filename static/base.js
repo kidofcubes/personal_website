@@ -137,7 +137,7 @@ function onPageLoad(){
     bgm_source = document.getElementById("bgm_source");
     let background_img = new Image();
     background_img.src = 'https://kidofcubes.fenesisu.moe/background/';
-
+    bgm.volume=0.5;
 
     background_img.onload = function(){
         document.body.style.backgroundImage = "url('" + background_img.src + "')";

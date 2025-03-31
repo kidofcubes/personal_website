@@ -14,11 +14,12 @@
     {{"<!--  hi  -->" | safeHTML}}
 
 
-    <audio id="bgm" preload="none" autoplay="false"><source id="bgm_source" src="/stream" type="audio/ogg" /></audio>
+    <audio id="bgm" preload="none"><source id="bgm_source" src="/stream" type="audio/ogg" /></audio>
     <canvas style="position:fixed;width:100vw;height:100vh;top:0;bottom:0;z-index:-1;" id="backgroundrender"></canvas>
 
     <div class="layout">
         <header>
+            <a href="/">home</a>
             <a href="/stream">sounds</a>
             <span id="bgm_button" style="cursor:pointer;user-select:none;-webkit-user-select:none;" onclick="togglebgm()">&#xf04b</span>
             <canvas style="display:inline-block;height:26px;width:256px;vertical-align:top;" id="audio_visualizer"></canvas>
